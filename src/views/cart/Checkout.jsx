@@ -254,7 +254,7 @@ class CheckoutView extends Component {
                 </div>
                 <div className="card-footer border-info">
                   <button type="button" className="btn btn-block btn-info">
-                    Pay Now <strong>$162</strong>
+                    Pay Now <strong>Rs.475</strong>
                   </button>
                 </div>
               </div>
@@ -263,42 +263,17 @@ class CheckoutView extends Component {
               <div className="card">
                 <div className="card-header">
                   <IconCart3 className="i-va" /> Cart{" "}
-                  <span className="badge bg-secondary float-right">3</span>
+                  <span className="badge bg-secondary float-right">1</span>
                 </div>
                 <ul className="list-group list-group-flush">
                   <li className="list-group-item d-flex justify-content-between lh-sm">
                     <div>
-                      <h6 className="my-0">Product name</h6>
-                      <small className="text-muted">Brief description</small>
+                      <h6 className="my-0">Solid Men Round Neck Multicolor T-Shirt</h6>
+                      <small className="text-muted">Best to Buy</small>
                     </div>
-                    <span className="text-muted">$150</span>
+                    <span className="text-muted">Rs.475</span>
                   </li>
-                  <li className="list-group-item d-flex justify-content-between lh-sm">
-                    <div>
-                      <h6 className="my-0">Second product</h6>
-                      <small className="text-muted">Brief description</small>
-                    </div>
-                    <span className="text-muted">$12</span>
-                  </li>
-                  <li className="list-group-item d-flex justify-content-between lh-sm">
-                    <div>
-                      <h6 className="my-0">Third item</h6>
-                      <small className="text-muted">Brief description</small>
-                    </div>
-                    <span className="text-muted">$50</span>
-                  </li>
-                  <li className="list-group-item d-flex justify-content-between bg-light">
-                    <div className="text-success">
-                      <h6 className="my-0">Promo code</h6>
-                      <small>EXAMPLECODE</small>
-                    </div>
-                    <span className="text-success">−$50</span>
-                  </li>
-                  <li className="list-group-item d-flex justify-content-between">
-                    <span>Total (USD)</span>
-                    <strong>$162</strong>
-                  </li>
-                </ul>
+                                  </ul>
               </div>
             </div>
           </div>

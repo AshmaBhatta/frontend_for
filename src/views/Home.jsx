@@ -10,7 +10,7 @@ import { ReactComponent as IconDisplay } from "bootstrap-icons/icons/display.svg
 import { ReactComponent as IconHdd } from "bootstrap-icons/icons/hdd.svg";
 import { ReactComponent as IconUpcScan } from "bootstrap-icons/icons/upc-scan.svg";
 import { ReactComponent as IconTools } from "bootstrap-icons/icons/tools.svg";
-
+const Women = lazy(() => import("../views/product/DetailMen"));
 const Support = lazy(() => import("../components/Support"));
 const Banner = lazy(() => import("../components/carousel/Banner"));
 const Carousel = lazy(() => import("../components/carousel/Carousel"));
@@ -123,7 +123,7 @@ class HomeView extends Component {
               </Link>
             </div>
             <div className="col-md-3">
-              <Link to="/" className="text-decoration-none">
+              <Link to="/category-women" className="text-decoration-none">
                 <img
                   src="../../images/category/smartwatch.webp"
                   className="img-fluid rounded-circle"

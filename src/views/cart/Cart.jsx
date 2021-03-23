@@ -59,10 +59,10 @@ class CartView extends Component {
                                 to="/product/detail"
                                 className="text-decoration-none"
                               >
-                                Another name of some product goes just here
+                               Solid Men Round Neck Multicolor T-Shirt
                               </Link>
                               <p className="small text-muted">
-                                Size: XL, Color: blue, Brand: XYZ
+                                Size: XL, Color: blue, Brand: NIKE
                               </p>
                             </div>
                           </div>
@@ -89,9 +89,9 @@ class CartView extends Component {
                           </div>
                         </td>
                         <td>
-                          <var className="price">$237.00</var>
+                          <var className="price">Rs. 475.00</var>
                           <small className="d-block text-muted">
-                            $79.00 each
+                            Rs. 475.00 each
                           </small>
                         </td>
                         <td className="text-right">
@@ -104,63 +104,7 @@ class CartView extends Component {
                         </td>
                                         </tr>
                                         <tr>
-                        <td>
-                          <div className="row">
-                            <div className="col-3 d-none d-md-block">
-                              <img
-                                src="../../images/products/tshirt_grey_480x400.webp"
-                                width="80"
-                                alt="..."
-                              />
-                            </div>
-                            <div className="col">
-                              <Link
-                                to="/product/detail"
-                                className="text-decoration-none"
-                              >
-                                Another name of some product goes just here
-                              </Link>
-                              <p className="small text-muted">
-                                Size: XL, Color: blue, Brand: XYZ
-                              </p>
-                            </div>
-                          </div>
-                        </td>
-                        <td>
-                          <div className="input-group input-group-sm mw-140">
-                            <button
-                              className="btn btn-primary text-white"
-                              type="button"
-                            >
-                              <FontAwesomeIcon icon={faMinus} />
-                            </button>
-                            <input
-                              type="text"
-                              className="form-control"
-                              defaultValue="1"
-                            />
-                            <button
-                              className="btn btn-primary text-white"
-                              type="button"
-                            >
-                              <FontAwesomeIcon icon={faPlus} />
-                            </button>
-                          </div>
-                        </td>
-                        <td>
-                          <var className="price">$237.00</var>
-                          <small className="d-block text-muted">
-                            $79.00 each
-                          </small>
-                        </td>
-                        <td className="text-right">
-                          <button className="btn btn-sm btn-outline-secondary mr-2">
-                            <IconHeartFill className="i-va" />
-                          </button>
-                          <button className="btn btn-sm btn-outline-danger">
-                            <IconTrash className="i-va" />
-                          </button>
-                        </td>
+                       
                       </tr>
                     </tbody>
                   </table>

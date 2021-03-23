@@ -46,7 +46,7 @@ class ProductListView extends Component {
   };
 
   getProducts = () => {
-    let products = data.products;
+    let products = data.products1;
     products = products.concat(products);
     products = products.concat(products);
     products = products.concat(products);
@@ -61,12 +61,12 @@ class ProductListView extends Component {
         <div
           className="p-5 bg-primary bs-cover"
           style={{
-            backgroundImage: "url(../../images/banner/50-Banner.webp)",
+            backgroundImage: "url(../../images/banner/bann.jpg)",
           }}
         >
           <div className="container text-center">
             <span className="display-5 px-3 bg-white rounded shadow">
-             Welcome Gentlemen
+             Hey Ladies, Lets Shop
             </span>
           </div>
         </div>
@@ -88,7 +88,7 @@ class ProductListView extends Component {
                 <div className="col-md-8">
                   <span className="align-middle font-weight-bold">
                     {this.state.totalItems} results for{" "}
-                    <span className="text-warning">"t-shirts"</span>
+                    <span className="text-warning">"Women's Fashion"</span>
                   </span>
                 </div>
                 <div className="col-md-4">
@@ -107,11 +107,10 @@ class ProductListView extends Component {
                       aria-label="Grid"
                       type="button"
                       onClick={() => this.onChangeView("grid")}
-                      className={`btn ${
-                        this.state.view === "grid"
+                      className={`btn ${this.state.view === "grid"
                           ? "btn-primary"
                           : "btn-outline-primary"
-                      }`}
+                        }`}
                     >
                       <FontAwesomeIcon icon={faTh} />
                     </button>
@@ -119,11 +118,10 @@ class ProductListView extends Component {
                       aria-label="List"
                       type="button"
                       onClick={() => this.onChangeView("list")}
-                      className={`btn ${
-                        this.state.view === "list"
+                      className={`btn ${this.state.view === "list"
                           ? "btn-primary"
                           : "btn-outline-primary"
-                      }`}
+                        }`}
                     >
                       <FontAwesomeIcon icon={faBars} />
                     </button>

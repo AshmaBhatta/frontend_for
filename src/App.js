@@ -7,10 +7,11 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import "./App.min.css";
 import KommunicateChat from './chat';
+import { useSelector, useDispatch } from "react-redux";
 //const Header = lazy(() => import("./components/Header"));
 //const TopMenu = lazy(() => import("./components/TopMenu"));
 const HomeView = lazy(() => import("./views/Home"));
-const SignInView = lazy(() => import("./views/account/SignIn"));
+const Login = lazy(() => import("./components/account/SignUpForm"));
 const SignUpView = lazy(() => import("./views/account/SignUp"));
 const ForgotPasswordView = lazy(() => import("./views/account/ForgotPassword"));
 const OrdersView = lazy(() => import("./views/account/Orders"));
@@ -18,6 +19,8 @@ const WishlistView = lazy(() => import("./views/account/Wishlist"));
 const NotificationView = lazy(() => import("./views/account/Notification"));
 const MyProfileView = lazy(() => import("./views/account/MyProfile"));
 const ProductListView = lazy(() => import("./views/product/List"));
+const ProductListViewMen = lazy(() => import("./views/product/List"));
+const ProductListViewWomen = lazy(() => import("./views/product/ListWomen"));
 const ProductDetailView = lazy(() => import("./views/product/Detail"));
 const StarZoneView = lazy(() => import("./views/product/StarZone"));
 const CartView = lazy(() => import("./views/cart/Cart"));
@@ -31,11 +34,12 @@ const BlogView = lazy(() => import("./views/blog/Blog"));
 const BlogDetailView = lazy(() => import("./views/blog/Detail"));
 
 function App() {
+  const Admin = useSelector((state) => state.user);
   return (
-   
+
     <BrowserRouter>
-    <div>
-     </div>
+      <div>
+      </div>
       <React.Fragment>
         <Header />
         <TopMenu />
@@ -44,42 +48,56 @@ function App() {
             <div className="text-white text-center mt-3">Loading...</div>
           }
         >
-        <KommunicateChat/>
+          <KommunicateChat />
           <Switch>
-            <Route exact path="/" component={HomeView} />
-            <Route exact path="/account/signin" component={SignInView} />
-            <Route exact path="/account/signup" component={SignUpView} />
-            <Route
-              exact
-              path="/account/forgotpassword"
-              component={ForgotPasswordView}
-            />
-            <Route exact path="/account/profile" component={MyProfileView} />
-            <Route exact path="/account/orders" component={OrdersView} />
-            <Route exact path="/account/wishlist" component={WishlistView} />
-            <Route
-              exact
-              path="/account/notification"
-              component={NotificationView}
-            />
-            
+            <Route exact path="/home" component={HomeView} />
+            <Route extact path="/category-men" component={ProductListViewMen} />
+            <Route extact path="/category-women" component={ProductListViewWomen} />
             <Route exact path="/category" component={ProductListView} />
-            <Route exact path="/product/detail" component={ProductDetailView} />
+            <Route exact path="/product/detail/men" component={ProductDetailView} />
             <Route exact path="/star/zone" component={StarZoneView} />
             <Route exact path="/cart" component={CartView} />
             <Route exact path="/checkout" component={CheckoutView} />
-            <Route exact path="/documentation" component={DocumentationView} />
-            <Route exact path="/contact-us" component={ContactUsView} />
-            <Route exact path="/support" component={SupportView} />
-            <Route exact path="/blog" component={BlogView} />
-            <Route exact path="/blog/detail" component={BlogDetailView} />
-            <Route exact path="/500" component={InternalServerErrorView} />
-            <Route component={NotFoundView} />
           </Switch>
+          {Admin ? (
+            <div>
+              <Switch>
+
+                <Route exact path="/account/profile" component={MyProfileView} />
+                <Route exact path="/account/orders" component={OrdersView} />
+                <Route exact path="/account/wishlist" component={WishlistView} />
+                <Route
+                  exact
+                  path="/account/notification"
+                  component={NotificationView}
+                />
+
+                <Route exact path="/documentation" component={DocumentationView} />
+                <Route exact path="/contact-us" component={ContactUsView} />
+                <Route exact path="/support" component={SupportView} />
+                <Route exact path="/blog" component={BlogView} />
+                <Route exact path="/blog/detail" component={BlogDetailView} />
+                <Route exact path="/500" component={InternalServerErrorView} />
+                <Route component={NotFoundView} />
+
+              </Switch>
+            </div>
+          ) : (
+              <Switch>
+                <Route
+                  exact
+                  path="/"
+                  name="Login Page"
+                  render={(props) => <Login {...props} />}
+                />
+              </Switch>
+            )
+          }
+
         </Suspense>
         <Footer />
       </React.Fragment>
-    </BrowserRouter>
+    </BrowserRouter >
   );
 }
 

@@ -13,7 +13,7 @@ class Auth extends Component {
 
 
         console.warn("state", this.state)
-        fetch('http://localhost:4000/api/users/login', {
+        fetch('http://localhost:4000/users/login', {
             method: "POST",
             headers: {
                 "Accept": "application/json",
@@ -26,14 +26,14 @@ class Auth extends Component {
                 console.log(resp.token);
 
                 localStorage.setItem("auth", JSON.stringify(resp.token))
-                window.location.pathname="/account/profile";
+                window.location.pathname="/";
                         })
         })
         
     }
     register() {
         console.warn("state", this.state)
-        fetch('http://localhost:4000/api/users/register',{
+        fetch('http://localhost:4000/users/register',{
             method: "POST",
             headers: {
                 "Accept": "application/json",
@@ -45,7 +45,7 @@ class Auth extends Component {
             result.json().then((resp) => {
                 console.log(resp.token);
                 localStorage.setItem("auth", JSON.stringify(resp.token))
-    
+
             })
         });
     }  
@@ -56,14 +56,7 @@ class Auth extends Component {
                     !this.state.isRegister ?
                 
                         <div className="contain">
-                       
-            
-            
                         <div className="logi">
-
-
-                        
-
                             <input type="text"
                                 placeholder="Email"
                                 className="username"
@@ -76,12 +69,9 @@ class Auth extends Component {
                             <button className="loginbtn" onClick={() => this.login()}>Login</button>
                             <br></br>
                             <button className="signupbtn" onClick={() => this.setState({ isRegister: true })}> Go to Register</button>
-                        
                         </div>
                         </div>
                           :
-                       
-                    
                         <div>
                         <div>
                             <input type="text"

@@ -81,41 +81,21 @@ const TopMenu = () => {
                 </ul>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/category">
-                  Fashion
+                <Link className="nav-link" to="/category-men">
+                  Men's Fashion
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/category">
-                  Supermarket
+                <Link className="nav-link" to="/category-women">
+                  Women's Fashion
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/category">
-                  Electronics
+                <Link className="nav-link" to="/category-kid">
+                  Kid's Fashion
                 </Link>
               </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/category">
-                  Furniture
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/category">
-                  Garden & Outdoors
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/category">
-                  Jewellery
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/documentation">
-                  Documentation
-                </Link>
-              </li>
-            </ul>
+             </ul>
           </div>
         </div>
       </nav>
